@@ -1,0 +1,342 @@
+/*前后缀缩写说明:
+前缀:1. g_ grid布局 2. m_ module模块 3. j_ js交互
+后缀:1. _h head头部 2. _b body主体 3. _f foot尾部 4. _s section段落 5. _n nav导航 6. _a article/aside部分/其他 7. _c control控制 8. _e explain说明 9. _l list列表 0. _i input输入*/
+
+body {
+    min-width: 1440px;
+    overflow: auto;
+}
+
+.section {
+    position: relative;
+    /*overflow: auto;*/
+    .content_box {
+        position: relative;
+        width: 1440px;
+        height: 620px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0);
+        display: none;
+    }
+}
+
+.g_head {
+
+    background: #00a9af url(../img/homepage_p1_bg.png) no-repeat center center;
+    background: #00a9af url(../img/mini/homepage_p1_bg.png) no-repeat center center\9;
+    background-size: cover;
+    .icon {
+        height: 40px;
+        line-height: 40px;
+        text-indent: 58px;
+        font-family: PingFangSC-Medium,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: 0.12px;
+        text-align: left;
+        background: url(../img/homepage_p1_logo.png) no-repeat 0 center;
+        background: url(../img/mini/homepage_p1_logo.png) no-repeat 0 center\9;
+        background-size: 40px;
+        position: absolute;
+        top: 20px;
+        left: 191px;
+    }
+    .title {
+        font-family: PingFangSC-Semibold,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 72px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        width: 504px;
+        height: 100px;
+        line-height: 100px;
+        position: absolute;
+        top: 125px;
+        left: 810px;
+    }
+    .text {
+        opacity: 0.76;
+        font-family: PingFangSC-Regular,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 40px;
+        width: 273px;
+        height: 80px;
+        position: absolute;
+        top: 241px;
+        left: 810px;
+    }
+    .download {
+        position: absolute;
+        top: 351px;
+        left: 810px;
+        width: 190px;
+        height: 50px;
+        line-height: 50px;
+        background: #FFFFFF;
+        box-shadow: 0 20px 20px -10px #007F83;
+        border-radius: 3px;
+        overflow: hidden;
+        img {
+            width: 30px;
+            height: 30px;
+            float: left;
+            display: block;
+            margin: 10px 12px;
+        }
+        .line {
+            width: 2px;
+            height: 30px;
+            box-sizing: border-box;
+            border: 1px solid #F7F7F7;
+            margin: 10px 0;
+            padding: 0;
+            float: left;
+        }
+        p {
+            font-family: PingFangSC-Medium,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 16px;
+            color: #00c692;
+            letter-spacing: 0;
+            text-align: center;
+            float: left;
+            text-indent: 11px;
+        }
+    }
+    .code {
+        width: 110px;
+        height: 140px;
+        background: #FFFFFF;
+        border-radius: 3px;
+        position: absolute;
+        top: 351px;
+        &.code_1 {
+            left: 1050px;
+        }
+        &.code_2 {
+            left: 1170px;
+        }
+        img {
+            margin: 5px 5px 0;
+            display: block;
+            height: 100px;
+            width: 100px;
+        }
+        p {
+            font-family: PingFangSC-Semibold,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 15px;
+            color: #4A4A4A;
+            letter-spacing: 0.84px;
+            line-height: 21px;
+            text-align: center;
+            margin: 7px 0;
+        }
+    }
+}
+
+.g_body_1 {
+    background: #FAFBFB;
+    background-image: linear-gradient(-180deg, #FFFFFF 0%, #FAFBFB 100%);
+    .title {
+        font-family: PingFangSC-Medium,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 24px;
+        color: #242424;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        top: 120px;
+    }
+    .text {
+        font-family: PingFangSC-Regular,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 15px;
+        color: #A1A1A1;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 21px;
+        height: 21px;
+        width: 100%;
+        position: absolute;
+        top: 170px;
+    }
+    .img_box {
+        width: 160px;
+        position: absolute;
+        top: 251px;
+        img{
+            width: 100%;
+        }
+        &.img_box_1 {
+            left: 460px;
+        }
+        &.img_box_2 {
+            right: 460px;
+        }
+        p {
+            height: 30px;
+            margin: 20px 0;
+            font-family: PingFangSC-Medium,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 20px;
+            color: #242424;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+}
+
+.g_body_2 {
+    .title {
+        font-family: PingFangSC-Semibold,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 24px;
+        color: #242424;
+        letter-spacing: 0;
+        line-height: 33px;
+        position: absolute;
+        width: 100%;
+        top: 120px;
+        text-align: center;
+    }
+    .expain_l {
+        width: 220px;
+        position: absolute;
+        top: 223px;
+        img {
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: 0px auto 40px;
+        }
+        h3 {
+            font-family: PingFangSC-Medium,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 20px;
+            color: #242424;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 30px;
+        }
+        p {
+            font-family: PingFangSC-Regular,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 15px;
+            color: #A1A1A1;
+            letter-spacing: 0;
+            text-align: center;
+            margin: 10px 0;
+            line-height: 21px;
+        }
+        &.expain_l_1 {
+            left: 160px;
+        }
+        &.expain_l_2 {
+            left: 460px;
+        }
+        &.expain_l_3 {
+            right: 460px;
+        }
+        &.expain_l_4 {
+            right: 160px;
+        }
+    }
+}
+
+.g_foot {
+    background: #282E36;
+    .title {
+        font-family: PingFangSC-Medium,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 33px;
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        text-align: center;
+    }
+    .code {
+        width: 100%;
+        position: absolute;
+        top: 213px;
+        img {
+            width: 140px;
+            height: 140px;
+            display: block;
+            margin: 0 auto;
+        }
+        p {
+            font-family: PingFangSC-Regular,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 15px;
+            color: #BBBFD5;
+            letter-spacing: 0;
+            line-height: 21px;
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .info {
+        height: 179px;
+        width: 100%;
+        border-top: 1px solid #8B8C95;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        position: absolute;
+        bottom: 0;
+    }
+    .text_box {
+        width: 400px;
+        text-align: left;
+        position: absolute;
+        top: 29px;
+        h5 {
+            margin: 0 0 11px;
+            font-family: PingFangSC-Regular,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 12px;
+            color: #8B8C95;
+            letter-spacing: 0;
+            line-height: 14px;
+            text-indent: 14px;
+        }
+        p {
+            font-family: PingFangSC-Regular,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+            font-size: 14px;
+            color: #8B8C95;
+            letter-spacing: 0;
+        }
+        &.text_box_1 {
+            left: 160px;
+            h5 {
+                background: url('../img/homepage_p4_1.png') no-repeat 0 center;
+                background: url('../img/mini/homepage_p4_1.png') no-repeat 0 center\9;
+                background-size: 10px 10px;
+            }
+        }
+        &.text_box_2 {
+            left: 590px;
+            h5 {
+                background: url('../img/homepage_p4_2.png') no-repeat 0 center;
+                background: url('../img/mini/homepage_p4_2.png') no-repeat 0 center\9;
+                background-size: 10px 10px;
+            }
+        }
+        &.text_box_3 {
+            left: 1020px;
+            h5 {
+                background: url('../img/homepage_p4_3.png') no-repeat 0 center;
+                background: url('../img/mini/homepage_p4_3.png') no-repeat 0 center\9;
+                background-size: 10px 10px;
+            }
+        }
+    }
+    .copyright {
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
+        text-align: center;
+        font-family: PingFangSC-Regular,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,黑体;
+        font-size: 12px;
+        color: #8B8C95;
+        letter-spacing: 0;
+        line-height: 14px;
+    }
+}
